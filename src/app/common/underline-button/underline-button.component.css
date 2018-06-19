@@ -1,0 +1,25 @@
+button {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  color: #e6c044;
+  position: relative;
+  padding: 3px;
+  cursor: pointer;
+}
+
+button:after {
+  content: '';
+  background: #e6c044;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.2s;
+}
+
+button:hover:after {
+  width: 100%;
+}

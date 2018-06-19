@@ -1,0 +1,19 @@
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { PostModel } from '../../models/post.model';
+
+@Component({
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class PostComponent implements OnInit {
+
+  @Input() post: PostModel;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
