@@ -3,7 +3,6 @@ button {
   text-transform: uppercase;
   border: none;
   background: transparent;
-  color: #e6c044;
   position: relative;
   padding: 3px;
   cursor: pointer;
@@ -11,7 +10,7 @@ button {
 
 button:after {
   content: '';
-  background: #e6c044;
+  background: gray;
   width: 0%;
   height: 2px;
   position: absolute;

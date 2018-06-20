@@ -2,8 +2,15 @@
   list-style: none;
   display: inline;
   margin: 10px;
-  color: yellow;
   text-transform: uppercase;
+}
+
+.menu button {
+  font-size: 16px;
+}
+
+.menu li:hover {
+  filter: grayscale(100%);
 }
 
 .menu {
@@ -11,6 +18,12 @@
   background: #000;
   position: fixed;
   width: 100%;
-  top:0;
+  top: 0;
   padding: 1.5rem;
+  z-index: 10;
+  box-shadow: 0px 1px;
+}
+
+header {
+  box-shadow: 0px 1px 10px blue;
 }

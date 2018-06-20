@@ -6,6 +6,8 @@ import {
 } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AddEntryComponent } from '../common/add-entry/add-entry.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'navbar',
@@ -17,5 +19,17 @@ export class NavbarComponent {
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private dialog: MatDialog
+  ) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddEntryComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
